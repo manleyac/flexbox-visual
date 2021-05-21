@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h2 class="title">Flexbox Visualizer</h2>
+      <h3>Change options to see how flexbox responds</h3>
+      <div id="container">
+        <div id="controlPanel">
+          <h3 class="title">Control Panel</h3>
+          <h3>Container</h3>
+          <div id="containerPanel">
+            <!-- <label> <input type="checkbox" v-model="isFlex" /> display: flex </label> -->
+            <div class="panelItem">
+              <label class="label" for="flexDirection">flex-direction:</label>
+              <select v-model="flexDirection" id="flexDirection">
+                <option value="row">row</option>
+                <option value="row-reverse">row-reverse</option>
+                <option value="column">column</option>
+                <option value="column-reverse">column-reverse</option>
+              </select>
+            </div>
+            <div class="panelItem">
+              <label class="label" for="flexWrap">flex-wrap:</label>
+              <select v-model="flexWrap" id="flexWrap">
+                <option value="nowrap">nowrap</option>
+                <option value="wrap">wrap</option>
+                <option value="wrap-reverse">wrap-reverse</option>
+              </select>
+            </div>
+            <div class="panelItem">
+              <label class="label" for="justifyContent">justify-content:</label>
+              <select v-model="justifyContent" id="justifyContent">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="start">start</option>
+                <option value="end">end</option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="space-evenly">space-evenly</option>
+              </select>
+            </div>
+          </div>
+          <div><h3>Items</h3></div>
+        </div>
+        <div id="flex-container" :style="container_styles">
+          <div class="square"><p>1</p></div>
+          <div class="square"><p>2</p></div>
+          <div class="square"><p>3</p></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

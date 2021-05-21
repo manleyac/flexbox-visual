@@ -1,0 +1,42 @@
+#app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#containerPanel {
+   display: flex;
+   flex-direction: column;
+}
+
+.panelItem {
+   display: flex;
+   justify-content: space-between;
+}
+
+.label {
+  margin-right: 5px;
+}
+
+#flex-container {
+   width: 400px;
+   height: 400px;
+   background-color: blueviolet;
+   display: flex;
+ }
+
+.square {
+  width: 75px;
+  height: 75px;
+  margin: 4px;
+  background-color: orangered;
+  text-align: center;
+}
